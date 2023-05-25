@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>IntroSkip</AssemblyName>
+    <Description>Skips the intro when the game starts</Description>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <Authors>iZastic</Authors>
+    <PackageId>$(Authors).$(AssemblyName)</PackageId>
+    <PackageProjectUrl>https://github.com/iZastic/vrising-autoready</PackageProjectUrl>
+    <RootNamespace>IntroSkip</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.*" IncludeAssets="compile" />
+    <PackageReference Include="VRising.Unhollowed.Client" Version="0.6.1.57247001" />
+  </ItemGroup>
+  
+  <Import Project="$(MSBuildProjectDirectory)\PluginInfo.props" />
+  <Import Project="$(MSBuildProjectDirectory)\Manifest.props" />
+
+  <Target Name="CopyPackageFiles" AfterTargets="Build">
+    <Copy ContinueOnError="true" SourceFiles="$(TargetDir)$(ProjectName).dll;$(IntermediateOutputPath)manifest.json;$(ProjectDir)icon.png;$(ProjectDir)README.md" DestinationFolder="$(ProjectDir)package" />
+    <Message Text="Copied build files to package directory" Importance="High" />
+  </Target>
+  
+</Project>
