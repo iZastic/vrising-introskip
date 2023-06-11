@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.*" IncludeAssets="compile" />
-    <PackageReference Include="VRising.Unhollowed.Client" Version="0.6.1.57247001" />
+    <PackageReference Include="VRising.Unhollowed.Client" Version="0.6.5.57575090" />
   </ItemGroup>
   
   <Import Project="$(MSBuildProjectDirectory)\PluginInfo.props" />
