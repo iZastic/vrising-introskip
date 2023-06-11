@@ -9,7 +9,7 @@
     <LangVersion>latest</LangVersion>
     <Authors>iZastic</Authors>
     <PackageId>$(Authors).$(AssemblyName)</PackageId>
-    <PackageProjectUrl>https://github.com/iZastic/vrising-autoready</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/iZastic/vrising-introskip</PackageProjectUrl>
     <RootNamespace>IntroSkip</RootNamespace>
   </PropertyGroup>
 
