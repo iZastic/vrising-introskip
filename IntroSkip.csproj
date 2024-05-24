@@ -1,10 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>IntroSkip</AssemblyName>
     <Description>Skips the intro when the game starts</Description>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <Authors>iZastic</Authors>
@@ -14,8 +14,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="package\**" />
+    <EmbeddedResource Remove="package\**" />
+    <None Remove="package\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.*" IncludeAssets="compile" />
-    <PackageReference Include="VRising.Unhollowed.Client" Version="0.6.5.57575090" />
+    <PackageReference Include="VRising.Unhollowed.Client" Version="1.0.2.794360001" />
   </ItemGroup>
   
   <Import Project="$(MSBuildProjectDirectory)\PluginInfo.props" />

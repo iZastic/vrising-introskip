@@ -11,6 +11,11 @@ Join the [modding discord](https://vrisingmods.com/discord) for support and tag 
 Submit a ticket on [GitHub](https://github.com/iZastic/vrising-introskip/issues)
 
 ### Changelog
+`1.1.0`
+- Bump dependency versions for 1.0
+
+<details>
+
 `1.0.0`
 - Initial release
 
